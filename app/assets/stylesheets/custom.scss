@@ -1,0 +1,72 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+html, body {
+  height: 94%;
+}
+
+.wrapper {
+  min-height: 100%;
+  margin-bottom: -60px;
+  padding-bottom: 0px;
+}
+
+.nav-container {
+  margin-top: 10px;
+  margin-left: 50px;
+}
+
+#logo {
+  font-weight: 200;
+  font-size: 24px;
+  text-decoration: none;
+  float: left;
+}
+
+.counter {
+  float: right;
+}
+
+.nav-item {
+  display: inline-block;
+  margin: 10px;
+}
+
+.counter {
+  float: right;
+}
+
+.container {
+  margin-top: 80px;
+}
+
+.prod-name {
+  text-align: center;
+}
+
+.order-details .col-md-2 {
+  border-bottom: 1px solid #eaeaea;
+}
+
+.product {
+  border: solid 1px #2E2F30;
+  padding: 15px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.footer {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  background-color: #efefef;
+  text-align: center;
+
+}
+
+.footer .content {
+  margin: 5px;
+  text-align: center;
+}

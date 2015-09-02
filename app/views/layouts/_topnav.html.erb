@@ -1,0 +1,11 @@
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="nav-container">
+    <a id='logo' href="/">Monster Beverage</a>
+    <div class="shipped-counter col-md-2 nav-item pull-right">
+      <strong>Orders shipped: <span id = 'total_order_shipped'><%= Order.shipped.count %></span></strong>
+    </div>
+    <div class="ounces-sold col-md-2 nav-item pull-right">
+      <strong>Units sold: <span id = 'total_units_sold'><%= Order.units_sold %></span></strong>
+    </div>
+  </div>
+</nav>
