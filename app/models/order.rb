@@ -6,6 +6,7 @@ class Order < ActiveRecord::Base
   # #scopes
   scope :shipped, -> { where(shipped: true) }
   scope :completed, -> { where(complete: true) }
+  scope :lastest_order, -> { order("id desc").limit(5)}
 
   def add_product(product_name, qty)
     product = Product.where(name: product_name).first

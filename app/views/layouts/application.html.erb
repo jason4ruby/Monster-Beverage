@@ -1,28 +1,48 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-  <title><%= page_title %></title>
+  <title>
+    <%= page_title %>
+  </title>
   <script type="text/javascript">
-   window.pusher_key = '<%= Rails.application.secrets.pusher_key %>';
- </script>
+    window.pusher_key = '<%= Rails.application.secrets.pusher_key %>';
+  </script>
   <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.0/css/font-awesome.min.css" media="screen" rel="stylesheet" type="text/css" />
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+      <%= csrf_meta_tags %>
 </head>
+
 <body>
-<div class="wrapper">
-  <%= render 'layouts/topnav' %>
-  <div class="container">
-    <% if notice %>
-      <p class="alert alert-success"><%= notice %></p>
-    <% end %>
-    <% if alert %>
-      <p class="alert alert-danger"><%= alert %></p>
-    <% end %>
-    <%= yield %>
+  <div class="wrapper">
+    <%= render 'layouts/topnav' %>
+      <div class="container">
+        <% if notice %>
+          <p class="alert alert-success">
+            <%= notice %>
+          </p>
+          <% end %>
+            <% if alert %>
+              <p class="alert alert-danger">
+                <%= alert %>
+              </p>
+              <% end %>
+                <%= yield %>
+      </div>
+      <table>
+      <li class="clearfix">
+        <% Order.lastest_order.each do |order| %>
+          <h4>
+            <a href="#">
+              <%= "#{order.customer.first_name} just purchased from #{order.customer.city}, #{order.customer.country}" %>
+            </a>
+          </h4>
+          <% end %>
+      </li>
+      </table>
+      <%= render 'layouts/footer' %>
   </div>
-  <%= render 'layouts/footer' %>
-</div>
 </body>
+
 </html>
