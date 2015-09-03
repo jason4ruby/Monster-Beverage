@@ -27,5 +27,6 @@ $(document).ready(function() {
       return $('#total_units_sold').html(event.value);
     });
   });
+  
 
 });

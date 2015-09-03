@@ -34,10 +34,10 @@
       <li class="clearfix">
         <% Order.lastest_order.each do |order| %>
           <h4>
-            <a href="#">
-              <%= "#{order.customer.first_name} just purchased from #{order.customer.city}, #{order.customer.country}" %>
-            </a>
-          </h4>
+            <div id= "order_feed#{order.id}">
+             <%= "#{order.customer.first_name} just purchased from #{order.customer.city}, #{order.customer.country}" %>
+          </div>
+        </h4>
           <% end %>
       </li>
       </table>
